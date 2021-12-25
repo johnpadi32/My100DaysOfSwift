@@ -14,10 +14,13 @@ class DetailViewController: UIViewController {
     
     var selectedImage: String?
     
+    var selectedPictureNumber = 1
+    var totalPictures = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = selectedImage
+        title = "This Image is \(selectedPictureNumber) 0f \(totalPictures)"
         
         // Unible large title on navigationBar
         navigationItem.largeTitleDisplayMode = .never
@@ -36,16 +39,4 @@ class DetailViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
